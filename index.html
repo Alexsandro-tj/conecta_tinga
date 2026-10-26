@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CONECTA TINGA — Vagas e Profissionais</title>
+<link rel="icon" href="img/mascote.webp" type="image/webp">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir ou fechar menu">
+
+<header class="header">
+  <div class="header__bar">
+    <a href="index.html" class="logo" aria-label="CONECTA TINGA — página inicial">
+      <span class="mascot" role="img" aria-label="Mascote Tinguinha"></span>
+      <span><b>CONECTA</b> <em>TINGA</em></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a class="btn" data-r="vagas" href="vagas.html">💼 Vagas</a>
+      <a class="btn" data-r="profissionais" href="profissionais.html">🧑‍🔧 Profissionais</a>
+      <a class="btn" data-r="blog" href="blog.html">📝 Blog</a>
+    </nav>
+    <label for="menu-toggle" class="btn menu-btn" role="button" aria-controls="sidebar">☰ Menu</label>
+  </div>
+</header>
+
+<label for="menu-toggle" class="overlay" aria-label="Fechar menu"></label>
+
+<aside class="sidebar" id="sidebar" aria-label="Menu lateral">
+  <div class="sidebar__top">
+    <strong>Menu</strong>
+    <label for="menu-toggle" class="close" aria-label="Fechar">×</label>
+  </div>
+  <ul>
+    <li><a href="cadastro.html" class="signup">✍️ Cadastre-se</a></li>
+    <li><a href="vagas.html">Ver vagas</a></li>
+    <li><a href="profissionais.html">Profissionais</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#anunciar">Anuncie em destaque</a></li>
+    <li><a href="index.html#como-funciona">Como funciona</a></li>
+  </ul>
+  <small>Cadastro gratuito para candidatos.</small>
+</aside>
+
+<main>
+
+  <!-- HERO + BUSCA (extra) -->
+  <section class="hero">
+    <span class="mascot hero__mascot" role="img" aria-label="Mascote Tinguinha acenando"></span>
+    <div class="container">
+      <h1>Encontre a vaga certa.<br>Ou o profissional certo.</h1>
+      <p>Empresas e autônomos da sua região em um só lugar.</p>
+      <form class="search" action="vagas.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Cargo ou serviço (ex.: eletricista)" aria-label="Cargo ou serviço">
+        <select name="cidade" aria-label="Cidade">
+          <option>Porto Alegre, RS</option><option>Canoas, RS</option><option>Gravataí, RS</option><option>Todo o Brasil</option><option>Remoto</option>
+        </select>
+        <button class="btn btn--primary" type="submit">🔍 Buscar</button>
+      </form>
+      <div class="chips" aria-label="Buscas populares">
+        <a href="vagas.html?q=vendas">Vendas</a><a href="vagas.html?q=administrativo">Administrativo</a><a href="vagas.html?q=motorista">Motorista</a><a href="vagas.html?q=tecnologia">TI</a><a href="vagas.html?q=remoto">Remoto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 VAGAS PREMIUM -->
+  <section class="section" aria-labelledby="t-vagas">
+    <div class="container">
+      <div class="section__head">
+        <div><span class="badge">★ Premium</span><h2 id="t-vagas">Vagas em destaque</h2><p>Empresas que escolheram se destacar.</p></div>
+        <a class="link" href="vagas.html">Ver todas →</a>
+      </div>
+      <ul class="cards" id="home-vagas"></ul>
+    </div>
+  </section>
+
+  <!-- 5 PROFISSIONAIS PREMIUM (mesmo molde) -->
+  <section class="section" aria-labelledby="t-prof">
+    <div class="container">
+      <div class="section__head">
+        <div><span class="badge">★ Premium</span><h2 id="t-prof">Profissionais em destaque</h2><p>Autônomos prontos para o seu serviço.</p></div>
+        <a class="link" href="profissionais.html">Ver todos →</a>
+      </div>
+      <ul class="cards" id="home-prof"></ul>
+    </div>
+  </section>
+
+  <!-- PRÉVIA DO BLOG -->
+  <section class="section" aria-labelledby="t-blog">
+    <div class="container">
+      <div class="section__head">
+        <div><h2 id="t-blog">Novidades no blog</h2><p>Dicas para quem busca emprego.</p></div>
+        <a class="link" href="blog.html">Ir ao blog →</a>
+      </div>
+      <div class="posts" id="home-posts"></div>
+    </div>
+  </section>
+
+  <!-- EXTRA: COMO FUNCIONA + CTA -->
+  <section class="section" id="como-funciona" aria-labelledby="t-como">
+    <div class="container">
+      <div class="section__head"><div><h2 id="t-como">Como funciona</h2><p>Três passos, sem complicação.</p></div></div>
+      <ol class="steps">
+        <li><strong>Crie seu cadastro</strong><span>Gratuito para candidatos e profissionais.</span></li>
+        <li><strong>Encontre ou publique</strong><span>Busque vagas e serviços ou anuncie o seu.</span></li>
+        <li><strong>Fale direto</strong><span>Contato sem intermediários.</span></li>
+      </ol>
+      <div class="stats" aria-label="Números da plataforma"><div><b>+1.200</b><span>vagas abertas</span></div><div><b>+800</b><span>profissionais</span></div><div><b>+350</b><span>empresas</span></div></div>
+
+      <div class="cta" id="anunciar">
+        <div><h2>Quer aparecer em destaque?</h2><p>Anuncie sua vaga ou serviço no topo da página e alcance mais gente.</p></div>
+        <a class="btn btn--primary" href="cadastro.html?perfil=empresa">Quero anunciar</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><h4>CONECTA TINGA</h4><p>Conectando quem precisa de gente com quem precisa de oportunidade.</p></div>
+      <div><h4>Navegue</h4><ul><li><a href="vagas.html">Vagas</a></li><li><a href="profissionais.html">Profissionais</a></li><li><a href="blog.html">Blog</a></li><li><a href="cadastro.html">Cadastro</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li><a href="mailto:contato@conectatinga.com.br">contato@conectatinga.com.br</a></li><li><a href="#">Termos de uso</a></li><li><a href="#">Privacidade</a></li></ul></div>
+    </div>
+    <p class="copy">© 2026 CONECTA TINGA. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-label="Detalhes"></dialog>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

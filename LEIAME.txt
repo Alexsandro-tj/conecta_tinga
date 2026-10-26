@@ -1,0 +1,11 @@
+CONECTA TINGA - front-end
+
+Abra index.html no navegador (nao precisa de servidor).
+
+index.html, vagas.html, profissionais.html, blog.html, post.html (post.html?id=1), cadastro.html (cadastro.html?perfil=empresa)
+css/style.css   estilos (mobile-first, modo escuro automatico)
+js/data.js      dados de exemplo: vagas, profissionais e posts do blog
+js/app.js       filtros, listas, janela de detalhes, blog e formulario de cadastro
+img/mascote.webp  logo/mascote (troque pelo arquivo original se quiser)
+
+O cadastro e apenas visual: nenhum dado e enviado ou salvo.

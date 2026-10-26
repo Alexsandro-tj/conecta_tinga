@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cadastre-se — CONECTA TINGA</title>
+<link rel="icon" href="img/mascote.webp" type="image/webp">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="cadastro">
+
+<input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir ou fechar menu">
+
+<header class="header">
+  <div class="header__bar">
+    <a href="index.html" class="logo" aria-label="CONECTA TINGA — página inicial">
+      <span class="mascot" role="img" aria-label="Mascote Tinguinha"></span>
+      <span><b>CONECTA</b> <em>TINGA</em></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a class="btn" data-r="vagas" href="vagas.html">💼 Vagas</a>
+      <a class="btn" data-r="profissionais" href="profissionais.html">🧑‍🔧 Profissionais</a>
+      <a class="btn" data-r="blog" href="blog.html">📝 Blog</a>
+    </nav>
+    <label for="menu-toggle" class="btn menu-btn" role="button" aria-controls="sidebar">☰ Menu</label>
+  </div>
+</header>
+
+<label for="menu-toggle" class="overlay" aria-label="Fechar menu"></label>
+
+<aside class="sidebar" id="sidebar" aria-label="Menu lateral">
+  <div class="sidebar__top">
+    <strong>Menu</strong>
+    <label for="menu-toggle" class="close" aria-label="Fechar">×</label>
+  </div>
+  <ul>
+    <li><a href="cadastro.html" class="signup">✍️ Cadastre-se</a></li>
+    <li><a href="vagas.html">Ver vagas</a></li>
+    <li><a href="profissionais.html">Profissionais</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#anunciar">Anuncie em destaque</a></li>
+    <li><a href="index.html#como-funciona">Como funciona</a></li>
+  </ul>
+  <small>Cadastro gratuito para candidatos.</small>
+</aside>
+
+<main>
+    <div class="pagehead"><div class="container"><h1>✍️ Cadastre-se</h1><p>Escolha seu perfil e comece em poucos minutos.</p></div></div>
+    <div class="container narrow">
+      <form class="form" id="cad">
+        <fieldset class="tabs"><legend class="sr">Tipo de cadastro</legend>
+          <label><input type="radio" name="perfil" value="candidato" checked><span>🙋 Candidato</span></label>
+          <label><input type="radio" name="perfil" value="empresa"><span>🏢 Empresa / Contratante</span></label>
+          <label><input type="radio" name="perfil" value="autonomo"><span>🧑‍🔧 Autônomo</span></label>
+        </fieldset>
+        <p class="hint" id="hint"></p>
+        <div class="field"><label for="nome">Nome completo</label><input id="nome" name="nome" required autocomplete="name"></div>
+        <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="tel">Celular</label><input id="tel" name="tel" type="tel" inputmode="numeric" required placeholder="(51) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}" title="Use o formato (51) 99999-9999" autocomplete="tel"></div>
+        <div class="field"><label for="cidade">Cidade</label><select id="cidade" name="cidade" required></select></div>
+        <div class="field" data-for="candidato"><label for="area">Área de interesse</label><select id="area" name="area" required></select></div>
+        <div class="field" data-for="empresa"><label for="razao">Nome da empresa</label><input id="razao" name="razao" required></div>
+        <div class="field" data-for="empresa"><label for="cnpj">CNPJ</label><input id="cnpj" name="cnpj" required inputmode="numeric" pattern="[0-9./\-]{14,18}" title="Informe os 14 números do CNPJ"></div>
+        <div class="field" data-for="autonomo"><label for="prof">Profissão ou serviço</label><input id="prof" name="prof" required placeholder="Ex.: eletricista"></div>
+        <div class="field" data-for="autonomo"><label for="valor">Valor do serviço</label><input id="valor" name="valor" placeholder="Ex.: a partir de R$ 100"></div>
+        <fieldset class="plans" data-for="empresa autonomo"><legend>Plano</legend>
+          <label><input type="radio" name="plano" value="gratis" checked><span><b>Gratuito</b><small>Apareça nas buscas de vagas e profissionais.</small></span></label>
+          <label><input type="radio" name="plano" value="premium"><span><b>★ Destaque Premium</b><small>Seu anúncio na página inicial. Entraremos em contato com os valores.</small></span></label>
+        </fieldset>
+        <div class="field"><label for="senha">Senha</label><input id="senha" name="senha" type="password" minlength="8" required autocomplete="new-password" placeholder="Mínimo de 8 caracteres"></div>
+        <label class="check"><input type="checkbox" required><span>Li e aceito os termos de uso e a política de privacidade.</span></label>
+        <button class="btn btn--primary btn--block" type="submit">Criar minha conta</button>
+      </form>
+      <div class="ok" id="ok" hidden>
+        <span class="mascot big" role="img" aria-label="Mascote Tinguinha"></span>
+        <h2>Cadastro recebido!</h2>
+        <p id="ok-msg" class="hint"></p><br>
+        <a class="btn btn--primary" href="vagas.html">Ver vagas</a>
+      </div>
+    </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><h4>CONECTA TINGA</h4><p>Conectando quem precisa de gente com quem precisa de oportunidade.</p></div>
+      <div><h4>Navegue</h4><ul><li><a href="vagas.html">Vagas</a></li><li><a href="profissionais.html">Profissionais</a></li><li><a href="blog.html">Blog</a></li><li><a href="cadastro.html">Cadastro</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li><a href="mailto:contato@conectatinga.com.br">contato@conectatinga.com.br</a></li><li><a href="#">Termos de uso</a></li><li><a href="#">Privacidade</a></li></ul></div>
+    </div>
+    <p class="copy">© 2026 CONECTA TINGA. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-label="Detalhes"></dialog>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
