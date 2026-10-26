@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vagas — CONECTA TINGA</title>
+<link rel="icon" href="img/mascote.webp" type="image/webp">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="vagas">
+
+<input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir ou fechar menu">
+
+<header class="header">
+  <div class="header__bar">
+    <a href="index.html" class="logo" aria-label="CONECTA TINGA — página inicial">
+      <span class="mascot" role="img" aria-label="Mascote Tinguinha"></span>
+      <span><b>CONECTA</b> <em>TINGA</em></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a class="btn" data-r aria-current="page" href="vagas.html">💼 Vagas</a>
+      <a class="btn" data-r="profissionais" href="profissionais.html">🧑‍🔧 Profissionais</a>
+      <a class="btn" data-r="blog" href="blog.html">📝 Blog</a>
+    </nav>
+    <label for="menu-toggle" class="btn menu-btn" role="button" aria-controls="sidebar">☰ Menu</label>
+  </div>
+</header>
+
+<label for="menu-toggle" class="overlay" aria-label="Fechar menu"></label>
+
+<aside class="sidebar" id="sidebar" aria-label="Menu lateral">
+  <div class="sidebar__top">
+    <strong>Menu</strong>
+    <label for="menu-toggle" class="close" aria-label="Fechar">×</label>
+  </div>
+  <ul>
+    <li><a href="cadastro.html" class="signup">✍️ Cadastre-se</a></li>
+    <li><a href="vagas.html">Ver vagas</a></li>
+    <li><a href="profissionais.html">Profissionais</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#anunciar">Anuncie em destaque</a></li>
+    <li><a href="index.html#como-funciona">Como funciona</a></li>
+  </ul>
+  <small>Cadastro gratuito para candidatos.</small>
+</aside>
+
+<main>
+    <div class="pagehead"><div class="container"><h1>💼 Vagas abertas</h1><p>Oportunidades de empresas cadastradas. As premium aparecem primeiro.</p></div></div>
+    <div class="container" id="list-vagas"></div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><h4>CONECTA TINGA</h4><p>Conectando quem precisa de gente com quem precisa de oportunidade.</p></div>
+      <div><h4>Navegue</h4><ul><li><a href="vagas.html">Vagas</a></li><li><a href="profissionais.html">Profissionais</a></li><li><a href="blog.html">Blog</a></li><li><a href="cadastro.html">Cadastro</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li><a href="mailto:contato@conectatinga.com.br">contato@conectatinga.com.br</a></li><li><a href="#">Termos de uso</a></li><li><a href="#">Privacidade</a></li></ul></div>
+    </div>
+    <p class="copy">© 2026 CONECTA TINGA. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-label="Detalhes"></dialog>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
